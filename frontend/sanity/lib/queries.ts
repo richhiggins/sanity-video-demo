@@ -11,6 +11,10 @@ const postFields = /* groq */ `
   coverImage,
   "date": coalesce(date, _updatedAt),
   "author": author->{firstName, lastName, picture},
+  video{
+    "playbackId": video.asset->metadata.playbacks[0]._id,
+    "aspectRatio": video.asset->metadata. aspectRatio,
+  }
 `;
 
 const linkReference = /* groq */ `

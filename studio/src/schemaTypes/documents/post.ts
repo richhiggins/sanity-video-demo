@@ -31,6 +31,7 @@ export const post = defineType({
       },
       validation: (rule) => rule.required(),
     }),
+    // todo add video field, 'global dataset reference'
     defineField({
       name: 'content',
       title: 'Content',

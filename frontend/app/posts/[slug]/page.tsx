@@ -10,6 +10,7 @@ import PortableText from "@/app/components/PortableText";
 import { sanityFetch } from "@/sanity/lib/live";
 import { postPagesSlugs, postQuery } from "@/sanity/lib/queries";
 import { resolveOpenGraphImage } from "@/sanity/lib/utils";
+import Video from "@/app/components/Video";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -35,7 +36,7 @@ export async function generateStaticParams() {
  */
 export async function generateMetadata(
   props: Props,
-  parent: ResolvingMetadata,
+  parent: ResolvingMetadata
 ): Promise<Metadata> {
   const params = await props.params;
   const { data: post } = await sanityFetch({
@@ -81,6 +82,12 @@ export default async function PostPage(props: Props) {
                   {post.title}
                 </h2>
               </div>
+
+              <Video
+                video_id={post.video?.playbackId}
+                aspectRatio={post.video?.aspectRatio}
+              />
+
               <div className="max-w-3xl flex gap-4 items-center">
                 {post.author &&
                   post.author.firstName &&
