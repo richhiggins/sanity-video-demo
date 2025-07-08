@@ -1,4 +1,6 @@
-# Clean Next.js + Sanity app
+# Clean Next.js + Sanity + Media Library app
+
+Includes an example of how to [reference](/studio/src/schemaTypes/documents/post.ts), [query for](/frontend/sanity/lib/queries.ts) and [serve video](/frontend/app/components/Video.tsx) from Media Library.
 
 This template includes a [Next.js](https://nextjs.org/) app with a [Sanity Studio](https://www.sanity.io/) – an open-source React application that connects to your Sanity project’s hosted dataset. The Studio is configured locally and can then be deployed for content collaboration.
 
