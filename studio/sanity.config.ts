@@ -132,4 +132,8 @@ export default defineConfig({
   schema: {
     types: schemaTypes,
   },
+
+  mediaLibrary: {
+    enabled: true,
+  },
 })

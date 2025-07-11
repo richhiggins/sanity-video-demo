@@ -1,6 +1,7 @@
 import {DocumentTextIcon} from '@sanity/icons'
 import {format, parseISO} from 'date-fns'
 import {defineField, defineType} from 'sanity'
+import {defineVideoField} from 'sanity/media-library'
 
 /**
  * Post schema.  Define and edit the fields for the 'post' content type.
@@ -31,7 +32,10 @@ export const post = defineType({
       },
       validation: (rule) => rule.required(),
     }),
-    // todo add video field, 'global dataset reference'
+    defineVideoField({
+      name: 'video',
+      title: 'Video',
+    }),
     defineField({
       name: 'content',
       title: 'Content',

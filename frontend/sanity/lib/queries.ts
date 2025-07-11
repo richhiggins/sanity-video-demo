@@ -12,8 +12,8 @@ const postFields = /* groq */ `
   "date": coalesce(date, _updatedAt),
   "author": author->{firstName, lastName, picture},
   video{
-    "playbackId": video.asset->metadata.playbacks[0]._id,
-    "aspectRatio": video.asset->metadata. aspectRatio,
+    "playbackId":asset->metadata.playbacks[0]._id,
+    "aspectRatio": asset->metadata.aspectRatio,
   }
 `;
 
