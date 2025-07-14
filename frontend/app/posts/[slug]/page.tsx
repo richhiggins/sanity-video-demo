@@ -82,9 +82,10 @@ export default async function PostPage(props: Props) {
                   {post.title}
                 </h2>
               </div>
-
               <Video
+                // @ts-ignore (pending typegen update)
                 video_id={post.video?.playbackId}
+                // @ts-ignore
                 aspectRatio={post.video?.aspectRatio}
               />
 
