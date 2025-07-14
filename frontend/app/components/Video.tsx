@@ -1,6 +1,6 @@
 import MuxPlayer from "@mux/mux-player-react";
 
-export default ({
+const Video = ({
   video_id,
   aspectRatio,
 }: {
@@ -12,3 +12,5 @@ export default ({
     style={{ width: "100%", height: "100%", aspectRatio: aspectRatio }}
   />
 );
+
+export default Video;
