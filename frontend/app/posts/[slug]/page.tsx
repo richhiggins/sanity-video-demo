@@ -84,9 +84,9 @@ export default async function PostPage(props: Props) {
               </div>
               <Video
                 // @ts-ignore (pending typegen update)
-                video_id={post.video?.playbackId}
+                video_id={post.video?.asset?.playbackId}
                 // @ts-ignore
-                aspectRatio={post.video?.aspectRatio}
+                aspectRatio={post.video?.asset?.aspectRatio}
               />
 
               <div className="max-w-3xl flex gap-4 items-center">
