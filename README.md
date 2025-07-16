@@ -1,6 +1,15 @@
 # Clean Next.js + Sanity + Media Library app
 
-**_Includes an example of how to [reference](/studio/src/schemaTypes/documents/post.ts#L35), [query for](/frontend/sanity/lib/queries.ts#L14) and [serve video](/frontend/app/components/Video.tsx) from Media Library._**
+## Media Library
+
+❗️Media Library needs to be enabled in [Sanity Studio config](/studio/sanity.config.ts#L136).
+
+This repository includes basic examples of how to 
+  - define a video [reference](/studio/src/schemaTypes/documents/post.ts#L35) within schema,
+  - [query for](/frontend/sanity/lib/queries.ts#L14) the minimal video data needed for mux player,
+  - [serve video](/frontend/app/components/Video.tsx) using the mux-player-react component
+
+## Clean Next.js + Sanity app
 
 This template includes a [Next.js](https://nextjs.org/) app with a [Sanity Studio](https://www.sanity.io/) – an open-source React application that connects to your Sanity project’s hosted dataset. The Studio is configured locally and can then be deployed for content collaboration.
 
