@@ -4,10 +4,11 @@
 
 ❗️Media Library needs to be enabled in [Sanity Studio config](/studio/sanity.config.ts#L136).
 
-This repository includes basic examples of how to 
+This repository includes basic examples of how to: 
   - define a video [reference](/studio/src/schemaTypes/documents/post.ts#L35) within schema,
   - [query for](/frontend/sanity/lib/queries.ts#L14) the minimal video data needed for mux player,
-  - [serve video](/frontend/app/components/Video.tsx) using the mux-player-react component
+  - [serve video](/frontend/app/components/Video.tsx) using the mux-player-react component,
+  - [use](/frontend/app/posts/%5Bslug%5D/page.tsx#L85) the video player in a page component.
 
 ## Clean Next.js + Sanity app
 
