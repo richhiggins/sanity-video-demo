@@ -32,6 +32,10 @@ export const post = defineType({
       },
       validation: (rule) => rule.required(),
     }),
+    defineField({
+      type: 'file',
+      name: 'OldVideo',
+    }),
     defineVideoField({
       name: 'video',
       title: 'Video',
