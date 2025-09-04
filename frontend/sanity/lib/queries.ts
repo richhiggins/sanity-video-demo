@@ -17,7 +17,7 @@ const postFields = /* groq */ `
       "aspectRatio": metadata.aspectRatio
     }
   },
-  "playbackInfo": documents::get(video.media){
+  "playbackInfo": documents::get(video.asset){
     "aspectRatio": metadata.aspectRatio,
     "publicPlaybackId": metadata.playbacks[policy == "public"][0]{ _id }._id,
     "playbackId": metadata.playbacks[0]._id
