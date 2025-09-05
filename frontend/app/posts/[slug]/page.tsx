@@ -83,7 +83,10 @@ export default async function PostPage(props: Props) {
                 </h2>
               </div>
 
-              <Video video_ref={post.video.asset._ref} />
+              <Video
+                // @ts-ignore
+                video_ref={post.video?.asset?._ref}
+              />
 
               <div className="max-w-3xl flex gap-4 items-center">
                 {post.author &&
