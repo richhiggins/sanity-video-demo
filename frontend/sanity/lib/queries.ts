@@ -12,16 +12,10 @@ const postFields = /* groq */ `
   "date": coalesce(date, _updatedAt),
   "author": author->{firstName, lastName, picture},
   video{
-    asset->{
-      "playbackId": metadata.playbacks[0]._id,
-      "aspectRatio": metadata.aspectRatio
+    asset{
+      _ref,
     }
   },
-  "playbackInfo": documents::get(video.asset){
-    "aspectRatio": metadata.aspectRatio,
-    "publicPlaybackId": metadata.playbacks[policy == "public"][0]{ _id }._id,
-    "playbackId": metadata.playbacks[0]._id
-  }
 `;
 
 const linkReference = /* groq */ `

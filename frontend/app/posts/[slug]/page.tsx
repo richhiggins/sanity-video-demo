@@ -82,10 +82,8 @@ export default async function PostPage(props: Props) {
                   {post.title}
                 </h2>
               </div>
-              <Video
-                video_id={post.playbackInfo?.playbackId}
-                aspectRatio={post.playbackInfo?.aspectRatio}
-              />
+
+              <Video video_ref={post.video.asset._ref} />
 
               <div className="max-w-3xl flex gap-4 items-center">
                 {post.author &&
