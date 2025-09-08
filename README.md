@@ -1,14 +1,43 @@
 # Clean Next.js + Sanity + Media Library app
 
+## Steps to update video integration
+
+!! Take a backup of the production dataset, and work/verify against a test dataset before running the script.
+
+### 1. Run migration script to update the video field data
+
+https://gist.github.com/sjelfull/f7229bc398e817c213880c4e1bfe138a
+
+e.g. ` npx tsx scripts/replaceLocalVideoAssets.ts --dry-run <projectId> <user session token> <dataset> --prod`
+
+### 2. Update the studio - so that video picker & preview in the Studio work
+
+https://github.com/richhiggins/sanity-video-demo/compare/fe919f5..06892ce?diff=split&w#diff-1d20c5400f2f3dee88cbdb8ea06ac9eea3f0077351c769611fe240cae9c06664
+
+### 3. Update the GROQ query video fields
+
+https://github.com/richhiggins/sanity-video-demo/compare/fe919f5..06892ce?diff=split&w#diff-292cd6ba24d033a0b29982ea65e7797be88ad40e75f7f0330967f087d2521fa8
+
+### 4. Update the video player component
+
+https://github.com/richhiggins/sanity-video-demo/compare/fe919f5..06892ce?diff=split&w#diff-84e5490f331a6c29391b37f298e7e4545c651692890b5a02cf4124214d5055c5
+Usage example:
+https://github.com/richhiggins/sanity-video-demo/compare/fe919f5..06892ce?diff=split&w#diff-b82ad962702183994dfec37fd4290d17cad92c42c16639f16cf050c18de9f8ab
+
+### 5. Existing local video documents can be manually removed once the changes are verified
+
+The script does not delete the depracated local video documents.
+
 ## Media Library
 
 ❗️Media Library needs to be enabled in [Sanity Studio config](/studio/sanity.config.ts#L136).
 
-This repository includes basic examples of how to: 
-  - define a video [reference](/studio/src/schemaTypes/documents/post.ts#L35) within schema,
-  - [query for](/frontend/sanity/lib/queries.ts#L14) the minimal video data needed for mux player,
-  - [serve video](/frontend/app/components/Video.tsx) using the mux-player-react component,
-  - [use](/frontend/app/posts/%5Bslug%5D/page.tsx#L85) the video player in a page component.
+This repository includes basic examples of how to:
+
+- define a video [reference](/studio/src/schemaTypes/documents/post.ts#L35) within schema,
+- [query for](/frontend/sanity/lib/queries.ts#L14) the minimal video data needed for mux player,
+- [serve video](/frontend/app/components/Video.tsx) using the mux-player-react component,
+- [use](/frontend/app/posts/%5Bslug%5D/page.tsx#L85) the video player in a page component.
 
 ## Clean Next.js + Sanity app
 
