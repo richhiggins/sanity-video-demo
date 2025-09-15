@@ -10,7 +10,7 @@ https://gist.github.com/sjelfull/f7229bc398e817c213880c4e1bfe138a
 
 e.g. ` npx tsx scripts/replaceLocalVideoAssets.ts --dry-run <projectId> <user session token> <dataset> --prod`
 
-### 2. Update the studio - so that video picker & preview in the Studio work
+### 2. Update the studio - so that video picker & preview work
 
 https://github.com/richhiggins/sanity-video-demo/compare/fe919f5..06892ce?diff=split&w#diff-1d20c5400f2f3dee88cbdb8ea06ac9eea3f0077351c769611fe240cae9c06664
 
@@ -18,9 +18,10 @@ https://github.com/richhiggins/sanity-video-demo/compare/fe919f5..06892ce?diff=s
 
 https://github.com/richhiggins/sanity-video-demo/compare/fe919f5..06892ce?diff=split&w#diff-292cd6ba24d033a0b29982ea65e7797be88ad40e75f7f0330967f087d2521fa8
 
-### 4. Update the video player component
+### 4. Update the video player component to use Sanity client
 
 https://github.com/richhiggins/sanity-video-demo/compare/fe919f5..06892ce?diff=split&w#diff-84e5490f331a6c29391b37f298e7e4545c651692890b5a02cf4124214d5055c5
+
 Usage example:
 https://github.com/richhiggins/sanity-video-demo/compare/fe919f5..06892ce?diff=split&w#diff-b82ad962702183994dfec37fd4290d17cad92c42c16639f16cf050c18de9f8ab
 
