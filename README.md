@@ -2,7 +2,7 @@
 
 ## Steps to update video integration
 
-!! Take a backup of the production dataset, and work/verify against a test dataset before running the script.
+!! Take a backup of the production dataset, and work/verify against a test dataset before running the script against production data.
 
 ### 1. Run migration script to update the video field data
 
@@ -10,7 +10,7 @@ https://gist.github.com/sjelfull/f7229bc398e817c213880c4e1bfe138a
 
 e.g. ` npx tsx scripts/replaceLocalVideoAssets.ts --dry-run <projectId> <user session token> <dataset> --prod`
 
-### 2. Update the studio - so that video picker & preview work
+### 2. Update the studio - so that video picker & preview work (now using global dataset reference)
 
 https://github.com/richhiggins/sanity-video-demo/compare/fe919f5..06892ce?diff=split&w#diff-1d20c5400f2f3dee88cbdb8ea06ac9eea3f0077351c769611fe240cae9c06664
 
@@ -18,7 +18,7 @@ https://github.com/richhiggins/sanity-video-demo/compare/fe919f5..06892ce?diff=s
 
 https://github.com/richhiggins/sanity-video-demo/compare/fe919f5..06892ce?diff=split&w#diff-292cd6ba24d033a0b29982ea65e7797be88ad40e75f7f0330967f087d2521fa8
 
-### 4. Update the video player component to use Sanity client
+### 4. Update the video player component to use Sanity client and additional props - domain, resolution
 
 https://github.com/richhiggins/sanity-video-demo/compare/fe919f5..06892ce?diff=split&w#diff-84e5490f331a6c29391b37f298e7e4545c651692890b5a02cf4124214d5055c5
 
